@@ -1,0 +1,47 @@
+.margin {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  background-color: rgb(22, 22, 22);
+  border-radius: 10px;
+}
+
+.dogImage {
+  max-width: 300px;
+  margin-right: 20px;
+  border-radius: 10px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.link img {
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.link img:hover {
+  transform: scale(1.1);
+}
+
+a img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}

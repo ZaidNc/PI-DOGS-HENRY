@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: rgb(18, 18, 18);
+}
+
+.paginado {
+  list-style: none;
+  display: flex;
+}
+
+.number {
+  margin: 0 5px;
+}
+
+.img {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #1f1e1e;
+}
+
+.img:hover {
+  background-color: #ddd;
+}

@@ -1,0 +1,56 @@
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.label {
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.select {
+  padding: 7px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333638;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.boton {
+  background-color: #7b7d7e;
+  color: #ffffff;
+  padding: 6.5px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #34495e;
+}
+
+.margin {
+  margin-right: 50px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navlink:hover {
+  text-decoration: underline;
+}
+
+.dogsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 80px;
+  justify-content: center;
+}
