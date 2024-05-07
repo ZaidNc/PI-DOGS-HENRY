@@ -1,3 +1,4 @@
+// Estado inicial del store Redux
 const initialState = {
   dogs: [],
   allDogs: [],
@@ -5,9 +6,9 @@ const initialState = {
   detail: [],
 };
 
-//console.log("estado inicial", initialState.dogs);
 function rootReducer(state = initialState, action) {
   switch (action.type) {
+    // Manejo de cada tipo de acción para actualizar el estado en consecuencia
     case "GET_DOGS":
       return {
         ...state,
@@ -40,7 +41,6 @@ function rootReducer(state = initialState, action) {
                   .find((e) => e === action.payload);
               }
             });
-      //console.log("filtro temperamentos",allDogs)
       return {
         ...state,
         dogs: temperamentFiltered,

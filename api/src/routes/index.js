@@ -7,7 +7,7 @@ const { API_KEY } = process.env;
 // Ejemplo: const authRouter = require('./auth.js');
 
 const router = Router();
-
+// Definición de métodos y funciones auxiliares
 Array.prototype.unique = (function (a) {
   return function () {
     return this.filter(a);
@@ -46,7 +46,6 @@ const getApiInfo = async () => {
         //      temperaments: e.temperament && e.temperament.split(", ")
       };
     });
-    //  console.log("informacion de la api",apiInfo)
     return apiInfo;
   } catch (error) {
     console.log("Hubo un error en el getApiInfo", error);
@@ -81,6 +80,7 @@ const getAllDogs = async () => {
 };
 
 router.get("/dogs", async (req, res) => {
+   // Filtrar perros por nombre
   try {
     const { name } = req.query;
     let dogsTotal = await getAllDogs();

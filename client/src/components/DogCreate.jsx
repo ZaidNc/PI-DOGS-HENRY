@@ -10,6 +10,7 @@ export default function DogCreate() {
   const history = useHistory();
   const temperaments = useSelector((state) => state.temperaments);
   const [errors, setErrors] = useState({});
+  //estado local de errores
 
   const [input, setInput] = useState({
     name: "",
@@ -24,7 +25,7 @@ export default function DogCreate() {
   });
   function validate(input) {
     let errors = {};
-
+    //validaciones 
     if (!input.name) {
       errors.name = "Debes llenar este campo";
     }
@@ -86,8 +87,6 @@ export default function DogCreate() {
       ...input,
       [e.target.name]: e.target.value,
     });
-
-    //console.log(input) //muestra el input en el navegador
   }
 
   function handleSelect(e) {
@@ -105,10 +104,10 @@ export default function DogCreate() {
   }
 
   function handleSubmit(e) {
+    //envia peticion a actions
     console.log(input);
     e.preventDefault();
     validate(input);
-    // console.log(input)
     if (
       Object.keys(errors).length === 0 &&
       input.name !== "" &&

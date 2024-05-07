@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-  </Provider>,
+  </Provider>,// Utiliza el Provider de Redux para proporcionar el store a todos los componentes
   document.getElementById('root')
 );
 

@@ -53,7 +53,7 @@ module.exports = (sequelize) => {
       },
     },
     {
-      timestamps: false,
+      timestamps: false, // No se incluirán createdAt y updatedAt en las filas de la tabla
     }
   );
 };

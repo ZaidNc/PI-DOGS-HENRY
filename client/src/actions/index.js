@@ -1,6 +1,10 @@
 import axios from "axios";
+// Acciones para interactuar con la api y actualizar el estado en consecuencia
+// Cada acción genera una petición http y luego dispatch una acción para actualizar el estado
 
 const ruta = "http://localhost:3001/";
+
+// Accion para obtener todas las razas de perros desde el servidor
 export function getDogs() {
   return async function (dispatch) {
     axios
@@ -15,6 +19,7 @@ export function getDogs() {
   };
 }
 
+// Accion para obtener razas de perros por nombre desde el servidor
 export function getNameDogs(name) {
   return async function (dispatch) {
     try {
@@ -34,6 +39,7 @@ export function getNameDogs(name) {
   };
 }
 
+// Otras acciones para filtrar, ordenar, crear y obtener detalles de razas de perros
 export function getTemperaments() {
   return async function (dispatch) {
     var temp = await axios.get("http://localhost:3001/temperaments", {});
@@ -43,7 +49,6 @@ export function getTemperaments() {
 }
 
 export function filterDogsByTemperaments(payload) {
-  // console.log("payload",payload)
   return {
     type: "FILTER_BY_TEMPERAMENTS",
     payload,
@@ -59,7 +64,6 @@ export function filterCreated(payload) {
 }
 
 export function postDogs(payload) {
-  // console.log(payload)
   return async function (dispatch) {
     const response = await axios.post("http://localhost:3001/dogs", payload);
     console.log(response);

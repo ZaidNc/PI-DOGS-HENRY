@@ -1,7 +1,6 @@
 import React from "react";
 //importo los hook que voy a usar de react
 import { useState, useEffect } from "react";
-//importo los hooks de react-redux (previamente se instala npm i react-redux)
 import { useDispatch, useSelector } from "react-redux";
 //importo las actions que me interesa usar en este componente
 import {
@@ -23,6 +22,7 @@ export default function Home() {
   const dispatch = useDispatch();
   const allDogs = useSelector((state) => state.dogs);
   const [orden, setOrden] = useState("");
+
   const [currentPage, setCurrentPage] = useState(1);
   const [dogsPerPage, setDogsPerPage] = useState(8);
   const indexOfLastDog = currentPage * dogsPerPage; // 1*9=9 2*9=18 3*9=27 4*9=36 5*9=45...
@@ -52,10 +52,12 @@ export default function Home() {
     setCurrentPage(1);
     setOrden(`Ordenado ${e.target.value}`);
   }
+  
   function handleClick(e) {
     e.preventDefault();
     dispatch(getDogs());
   }
+
   function handleFilterTemperament(e) {
     dispatch(filterDogsByTemperaments(e.target.value));
   }
