@@ -52,7 +52,7 @@ export default function Home() {
     setCurrentPage(1);
     setOrden(`Ordenado ${e.target.value}`);
   }
-  
+
   function handleClick(e) {
     e.preventDefault();
     dispatch(getDogs());
@@ -140,6 +140,8 @@ export default function Home() {
                         ? el.temperament
                         : el.Temperaments.map((e) => e.name + " ")
                     }
+                    weightMin={el.weight_min}
+                    weightMax={el.weight_max}
                     key={el.id}
                   />
                 </NavLink>
