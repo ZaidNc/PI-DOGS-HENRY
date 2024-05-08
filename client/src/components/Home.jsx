@@ -130,7 +130,7 @@ export default function Home() {
           {" "}
           {currentDogs?.map((el) => {
             return (
-              <div className={s.margin}>
+              <div className={s.margin} key={el.id}>
                 <NavLink className={s.navlink} to={`/home/${el.id}`}>
                   <DogCard
                     img={el.img}
@@ -142,7 +142,6 @@ export default function Home() {
                     }
                     weightMin={el.weight_min}
                     weightMax={el.weight_max}
-                    key={el.id}
                   />
                 </NavLink>
               </div>
