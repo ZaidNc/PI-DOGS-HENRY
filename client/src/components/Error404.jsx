@@ -2,9 +2,10 @@ import React from "react";
 import s from "../styles/Error404.module.css";
 import { Link } from "react-router-dom";
 import imagen from "../g9806.png";
+
 export const Error404 = () => {
   return (
-    <div>
+    <div className={s.page}>
       <Link to="/home">
         <img src={imagen} alt="" />
       </Link>
