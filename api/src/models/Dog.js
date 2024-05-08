@@ -48,8 +48,6 @@ module.exports = (sequelize) => {
       img: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue:
-          "https://i.pinimg.com/originals/0a/83/49/0a8349c457cbcf64edb0a337a9f06e8f.jpg",
       },
     },
     {

@@ -80,7 +80,7 @@ const getAllDogs = async () => {
 };
 
 router.get("/dogs", async (req, res) => {
-   // Filtrar perros por nombre
+  // Filtrar perros por nombre
   try {
     const { name } = req.query;
     let dogsTotal = await getAllDogs();
