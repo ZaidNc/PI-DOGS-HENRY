@@ -185,4 +185,9 @@ router.get("/dogs/:id", async (req, res) => {
   }
 });
 
+router.get('/dogs/showText', (req, res) => {
+  const { text } = req.query;
+  res.send(`El texto recibido es: ${a}`);
+});
+
 module.exports = router;

@@ -25,8 +25,8 @@ export default function Home() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [dogsPerPage, setDogsPerPage] = useState(8);
-  const indexOfLastDog = currentPage * dogsPerPage; // 1*9=9 2*9=18 3*9=27 4*9=36 5*9=45...
-  const indexOfFirstDog = indexOfLastDog - dogsPerPage; // 9-9=0 18-9=9 27-9=18 36-9=27 45-9=36...
+  const indexOfLastDog = currentPage * dogsPerPage;
+  const indexOfFirstDog = indexOfLastDog - dogsPerPage;
   const currentDogs = allDogs.slice(indexOfFirstDog, indexOfLastDog);
   const temperaments = useSelector((state) => state.temperaments);
 
