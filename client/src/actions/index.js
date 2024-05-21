@@ -2,7 +2,7 @@ import axios from "axios";
 // Acciones para interactuar con la api y actualizar el estado en consecuencia
 // Cada acción genera una petición http y luego dispatch una acción para actualizar el estado
 
-const ruta = "http://localhost:3001/";
+const ruta = "/";
 
 // Accion para obtener todas las razas de perros desde el servidor
 export function getDogs() {
@@ -24,7 +24,7 @@ export function getNameDogs(name) {
   return async function (dispatch) {
     try {
       var dogsByName = await axios.get(
-        "http://localhost:3001/dogs?name=" + name
+        "/dogs?name=" + name
       );
       return dispatch({
         type: "GET_NAME_DOGS",
@@ -42,7 +42,7 @@ export function getNameDogs(name) {
 // Otras acciones para filtrar, ordenar, crear y obtener detalles de razas de perros
 export function getTemperaments() {
   return async function (dispatch) {
-    var temp = await axios.get("http://localhost:3001/temperaments", {});
+    var temp = await axios.get("/temperaments", {});
     console.log(temp.data);
     return dispatch({ type: "GET_TEMPERAMENTS", payload: temp.data });
   };
@@ -65,7 +65,7 @@ export function filterCreated(payload) {
 
 export function postDogs(payload) {
   return async function (dispatch) {
-    const response = await axios.post("http://localhost:3001/dogs", payload);
+    const response = await axios.post("/dogs", payload);
     console.log(response);
     return response;
   };
@@ -88,7 +88,7 @@ export function orderByWeight(payload) {
 export function getDetail(id) {
   return async function (dispatch) {
     try {
-      var json = await axios.get("http://localhost:3001/dogs/" + id);
+      var json = await axios.get("/dogs/" + id);
       return dispatch({
         type: "GET_DETAILS",
         payload: json.data,

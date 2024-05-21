@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import DogCreate from "./components/DogCreate";
 import DogDetail from "./components/DogDetail";
 import { Error404 } from "./components/Error404";
+import axios from "axios";
+axios.defaults.baseURL =  "http://localhost:3001/";
 
 export function App() {
   return (
